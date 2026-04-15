@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vent Room | Unburden Yourself Anonymously</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0F172A',
+                        darker: '#0B1120',
+                        accent: '#6366F1', // Indigo
+                        accentHover: '#4F46E5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B1120; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-darker text-gray-200 antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-white/5 top-0">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-accent animate-pulse"></div>
+                <span class="text-xl font-bold text-white tracking-wide">The Vent Room.</span>
+            </div>
+            <a href="#book" class="text-sm font-semibold text-gray-300 hover:text-white transition-colors">
+                Book a Slot
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-accent mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                100% Anonymous & Secure
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Carrying a <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">heavy load?</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Life gets overwhelming. Family expectations, relationship struggles, or just endless daily stress. When you can't tell your friends because you don't want to be judged—talk to us. We'll just listen.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#book" class="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accentHover text-white rounded-xl font-semibold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.4)]">
+                    Unburden Yourself
+                </a>
+                <p class="text-sm text-gray-500 sm:hidden mt-2">Zero judgment. Just relief.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-panel p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-2xl">🤐</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Afraid of being judged?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Sometimes telling friends or family causes more drama, or they try to "fix" you. Here, you can say exactly what's on your mind without consequences.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-panel p-8 rounded-2xl border-accent/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-[40px]"></div>
+                    <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6 text-2xl">🌪️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Feeling overwhelmed?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Expectations, stress, and anxiety pile up. Sometimes you just need to let it all out to a stranger who isn't involved in your daily life.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-panel p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-2xl">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Not therapy. Just a vent.</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We aren't here to diagnose you or give you homework. Sometimes you just need someone to agree that things suck right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-24 relative">
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Book Your 20-Min Vent Session</h2>
+                <p class="text-gray-400">Only ₹199. Pick a nickname, choose a time, and message us.</p>
+            </div>
+
+            <div class="glass-panel p-6 md:p-10 rounded-3xl shadow-2xl">
+                <form id="bookingForm" class="space-y-6">
+                    <!-- Step 1: Nickname -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">1. Choose a Nickname</label>
+                        <input type="text" id="nickname" required placeholder="e.g., Batman, TiredGuy22" 
+                            class="w-full bg-darker border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors">
+                        <p class="text-xs text-gray-500 mt-2">Do not use your real name. This is what we will call you.</p>
+                    </div>
+
+                    <!-- Step 2: Time Slot -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">2. When do you want to talk?</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="timeSlots">
+                            <!-- Radio buttons acting as buttons -->
+                            <label class="cursor-pointer">
+                                <input type="radio" name="slot" value="Tonight 9:00 PM" class="peer sr-only" required>
+                                <div class="text-center p-3 rounded-xl border border-gray-700 bg-darker hover:bg-white/5 peer-checked:border-accent peer-checked:bg-accent/10 peer-checked:text-accent transition-all">
+                                    <span class="block text-sm font-semibold">Tonight</span>
+                                    <span class="block text-xs text-gray-500 mt-1">9:00 PM</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="slot" value="Tonight 11:30 PM" class="peer sr-only">
+                                <div class="text-center p-3 rounded-xl border border-gray-700 bg-darker hover:bg-white/5 peer-checked:border-accent peer-checked:bg-accent/10 peer-checked:text-accent transition-all">
+                                    <span class="block text-sm font-semibold">Tonight</span>
+                                    <span class="block text-xs text-gray-500 mt-1">11:30 PM</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="slot" value="Tomorrow 8:00 PM" class="peer sr-only">
+                                <div class="text-center p-3 rounded-xl border border-gray-700 bg-darker hover:bg-white/5 peer-checked:border-accent peer-checked:bg-accent/10 peer-checked:text-accent transition-all">
+                                    <span class="block text-sm font-semibold">Tomorrow</span>
+                                    <span class="block text-xs text-gray-500 mt-1">8:00 PM</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: WhatsApp Number -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">3. Your WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" required placeholder="+91 98765 43210" 
+                            class="w-full bg-darker border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors">
+                        <p class="text-xs text-gray-500 mt-2">We need this to verify your booking when you text us.</p>
+                    </div>
+
+                    <!-- Payment Notice (Updated) -->
+                    <div class="bg-blue-900/20 border border-blue-500/20 rounded-xl p-4 flex gap-3">
+                        <svg class="w-5 h-5 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div class="text-sm text-gray-300">
+                            <strong class="text-white block mb-1">No upfront payment required.</strong>
+                            Once you book your slot, message us on WhatsApp. We will share a secure payment link there to confirm your session.
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn" class="w-full py-4 bg-white text-dark hover:bg-gray-200 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2">
+                        Reserve Slot
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                    
+                    <!-- Loading State (Hidden initially) -->
+                    <div id="loadingState" class="hidden w-full py-4 bg-gray-800 text-white rounded-xl font-bold text-lg flex items-center justify-center gap-3">
+                        <div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        Reserving your space...
+                    </div>
+                </form>
+
+                <!-- Success State (Hidden initially) -->
+                <div id="successState" class="hidden text-center py-8">
+                    <div class="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">✓</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Slot Reserved!</h3>
+                    <p class="text-gray-400 mb-6">Tap the button below to message us on WhatsApp. We will send you a payment link to confirm your booking.</p>
+                    
+                    <a id="whatsappBtn" href="#" target="_blank" class="inline-flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-xl font-bold text-lg transition-colors mb-4 shadow-[0_0_20px_rgba(37,211,102,0.3)]">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Get Payment Link on WhatsApp
+                    </a>
+                    <p class="text-xs text-gray-500">Your session is only fully confirmed after payment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 text-center text-gray-600 text-sm">
+        <p>© 2026 The Vent Room. A safe space to vent.</p>
+        <p class="mt-2 text-xs">If you are experiencing a mental health crisis, please contact professional emergency services in your area.</p>
+    </footer>
+
+    <!-- LOGIC FOR SHEETS AND WHATSAPP REDIRECT -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const nickname = document.getElementById('nickname').value;
+            const slot = document.querySelector('input[name="slot"]:checked').value;
+            const whatsappNum = document.getElementById('whatsapp').value;
+            
+            // UI Update: Show loading state
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('loadingState').classList.remove('hidden');
+
+            // --- 1. SEND DATA TO GOOGLE SHEETS ---
+            // Replace this URL with your Google Apps Script Web App URL
+            const googleSheetsUrl = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; 
+            
+            try {
+                // UNCOMMENT THIS BLOCK when you have your Google Sheets Web App URL ready
+                /*
+                await fetch(googleSheetsUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Important for Google Sheets
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nickname: nickname,
+                        slot: slot,
+                        whatsapp: whatsappNum,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                */
+                console.log("Mock data saved to sheets:", { nickname, slot, whatsappNum });
+
+                // We use a small timeout here just so the user sees the "Processing..." state
+                // which gives them a sense of security before showing the success screen.
+                setTimeout(() => {
+                    // Set up the WhatsApp button with pre-filled text asking for the payment link
+                    // Replace '919999999999' with your actual business WhatsApp number
+                    const businessWhatsAppNumber = '919294778808'; 
+                    const message = `Hi The Vent Room, I just booked the ${slot} slot. My nickname is ${nickname}. Could you please send me the payment link?`;
+                    
+                    document.getElementById('whatsappBtn').href = `https://wa.me/${businessWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+
+                    // Show Success UI
+                    document.getElementById('bookingForm').classList.add('hidden');
+                    document.getElementById('loadingState').classList.add('hidden');
+                    document.getElementById('successState').classList.remove('hidden');
+                }, 800);
+
+            } catch (error) {
+                console.error("Error during booking flow:", error);
+                alert("Something went wrong. Please try again.");
+                document.getElementById('submitBtn').classList.remove('hidden');
+                document.getElementById('loadingState').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
