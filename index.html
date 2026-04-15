@@ -286,33 +286,34 @@
             document.getElementById('loadingState').classList.remove('hidden');
 
             // --- 1. SEND DATA TO GOOGLE SHEETS ---
-            // Replace this URL with your Google Apps Script Web App URL
-            const googleSheetsUrl = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; 
+            // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE:
+            const googleSheetsUrl = "https://script.google.com/macros/s/AKfycbwJwoyv2JpWRdtsp_JpA_1I5EK2mRIaRkhtYN7WzEJ5Tk_0O65DdFtMyW_Qnbr6WDepiA/exec"; 
             
             try {
-                // UNCOMMENT THIS BLOCK when you have your Google Sheets Web App URL ready
-                /*
-                await fetch(googleSheetsUrl, {
-                    method: 'POST',
-                    mode: 'no-cors', // Important for Google Sheets
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        nickname: nickname,
-                        slot: slot,
-                        method: method,
-                        whatsapp: whatsappNum,
-                        timestamp: new Date().toISOString()
-                    })
-                });
-                */
-                console.log("Mock data saved to sheets:", { nickname, slot, method, whatsappNum });
+                // If you have added your URL, send the data!
+                if (googleSheetsUrl !== "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+                    await fetch(googleSheetsUrl, {
+                        method: 'POST',
+                        mode: 'no-cors', // Important to avoid CORS blocks from Google
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            nickname: nickname,
+                            slot: slot,
+                            method: method,
+                            whatsapp: whatsappNum,
+                            timestamp: new Date().toLocaleString() // Formatted nicely for Sheets
+                        })
+                    });
+                }
+                
+                console.log("Booking flow triggered for:", { nickname, slot, method, whatsappNum });
 
                 // We use a small timeout here just so the user sees the "Processing..." state
                 // which gives them a sense of security before showing the success screen.
                 setTimeout(() => {
                     // Set up the WhatsApp button with pre-filled text asking for the payment link
                     // Replace '919999999999' with your actual business WhatsApp number
-                    const businessWhatsAppNumber = '919294778808'; 
+                    const businessWhatsAppNumber = '919999999999'; 
                     const message = `Hi The Vent Room, I just booked the ${slot} slot for a ${method} session. My nickname is ${nickname}. Could you please send me the payment link?`;
                     
                     document.getElementById('whatsappBtn').href = `https://wa.me/${businessWhatsAppNumber}?text=${encodeURIComponent(message)}`;
